@@ -1,0 +1,36 @@
+{
+  "name": "js-error-handler",
+  "version": "0.0.1",
+  "description": "Parse js Exceptions and Http responses to readable and standardized objects",
+  "main": "./distribution/ErrorHandler.js",
+  "scripts": {
+    "build": "babel -d distribution",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "keywords": [
+    "error",
+    "error",
+    "handling",
+    "js",
+    "logging",
+    "http",
+    "response",
+    "exception"
+  ],
+  "author": "dba.developing@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1"
+  }
+}

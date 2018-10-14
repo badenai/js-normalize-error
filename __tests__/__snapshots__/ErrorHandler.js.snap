@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorHandler --- Get Readable Error Object > Error 1`] = `
+Object {
+  "message": "This is a error",
+  "title": "Error",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > Type Error 1`] = `
+Object {
+  "message": "This is a type error",
+  "title": "TypeError",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > html response 1`] = `
+Object {
+  "_abort": false,
+  "body": "<html><body></body></html>",
+  "bodyUsed": false,
+  "headers": Object {
+    "content-type": Array [
+      "text/html",
+    ],
+  },
+  "message": "HTML can not be processed.",
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "title": "Not Found",
+  "url": "https://somerandomurl.com",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > json response 1`] = `
+Object {
+  "_abort": false,
+  "_bytes": 58,
+  "body": "{\\"explanation\\":\\"some error occurred\\",\\"title\\":\\"errorTitle\\"}",
+  "bodyUsed": true,
+  "explanation": "some error occurred",
+  "headers": Object {
+    "content-type": Array [
+      "application/json",
+    ],
+  },
+  "message": "some error occurred",
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "title": "errorTitle",
+  "url": "https://somerandomurl.com",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > text response 1`] = `
+Object {
+  "_abort": false,
+  "_bytes": 19,
+  "body": "some error occurred",
+  "bodyUsed": true,
+  "headers": Object {
+    "content-type": Array [
+      "text/plain",
+    ],
+  },
+  "message": "some error occurred",
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "title": "Not Found",
+  "url": "https://somerandomurl.com",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > undefined 1`] = `
+Object {
+  "message": "Something went wrong.",
+  "title": "Unknown Error",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > unknown Error 1`] = `
+Object {
+  "message": "Something went wrong.",
+  "title": "Unknown Error",
+}
+`;
+
+exports[`ErrorHandler --- Get Readable Error Object > unknown response 1`] = `
+Object {
+  "_abort": false,
+  "body": "",
+  "bodyUsed": false,
+  "headers": Object {
+    "content-type": Array [
+      "test",
+    ],
+  },
+  "message": "Something went wrong.",
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "title": "Not Found",
+  "url": "https://somerandomurl.com",
+}
+`;
