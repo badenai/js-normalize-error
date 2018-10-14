@@ -2,7 +2,7 @@
   "name": "js-normalize-error",
   "version": "0.0.4",
   "description": "Parse js Exceptions and Http responses to readable and standardized objects",
-  "main": "./src/index.js",
+  "main": "./distribution/index.js",
   "scripts": {
     "build": "node_modules/.bin/babel src -d distribution",
     "prepublishOnly": "npm run build",
