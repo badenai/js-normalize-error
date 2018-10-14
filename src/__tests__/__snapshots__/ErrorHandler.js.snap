@@ -114,3 +114,26 @@ Object {
   "url": "https://somerandomurl.com",
 }
 `;
+
+exports[`ErrorHandler --- Method tests > map JSON Response 1`] = `
+Object {
+  "_abort": false,
+  "_bytes": 58,
+  "body": "{\\"explanation\\":\\"some error occurred\\",\\"title\\":\\"errorTitle\\"}",
+  "bodyUsed": true,
+  "explanation": "some error occurred",
+  "headers": Object {
+    "content-type": Array [
+      "application/json",
+    ],
+  },
+  "message": "some error occurred",
+  "ok": false,
+  "size": 0,
+  "status": 404,
+  "statusText": "Not Found",
+  "timeout": 0,
+  "title": "errorTitle",
+  "url": "https://somerandomurl.com",
+}
+`;

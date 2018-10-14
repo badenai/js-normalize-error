@@ -5,7 +5,6 @@ export default class ErrorHandler {
     constructor(isDebug = false, info) {
         this.isDebug = isDebug;
         this.info = info;
-        this.logger = logger;
     }
 
     logError = (errorHandlerObject, info) => {

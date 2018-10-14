@@ -27,7 +27,7 @@ describe('ErrorHandler --- Method tests', () => {
         );
         return expect(
             errorHandler.mapJsonResponse(response, await response.json())
-        ).resolves.toMatchSnapshot();
+        ).toMatchSnapshot();
     });
 });
 
