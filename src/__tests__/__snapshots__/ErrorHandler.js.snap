@@ -16,13 +16,10 @@ Object {
 
 exports[`ErrorHandler --- Get Readable Error Object > html response 1`] = `
 Object {
-  "_abort": false,
   "body": "<html><body></body></html>",
   "bodyUsed": false,
   "headers": Object {
-    "content-type": Array [
-      "text/html",
-    ],
+    "content-type": "text/html",
   },
   "message": "HTML can not be processed.",
   "ok": false,
@@ -37,15 +34,11 @@ Object {
 
 exports[`ErrorHandler --- Get Readable Error Object > json response 1`] = `
 Object {
-  "_abort": false,
-  "_bytes": 58,
   "body": "{\\"explanation\\":\\"some error occurred\\",\\"title\\":\\"errorTitle\\"}",
   "bodyUsed": true,
   "explanation": "some error occurred",
   "headers": Object {
-    "content-type": Array [
-      "application/json",
-    ],
+    "content-type": "application/json",
   },
   "message": "some error occurred",
   "ok": false,
@@ -60,14 +53,10 @@ Object {
 
 exports[`ErrorHandler --- Get Readable Error Object > text response 1`] = `
 Object {
-  "_abort": false,
-  "_bytes": 19,
   "body": "some error occurred",
   "bodyUsed": true,
   "headers": Object {
-    "content-type": Array [
-      "text/plain",
-    ],
+    "content-type": "text/plain",
   },
   "message": "some error occurred",
   "ok": false,
@@ -96,13 +85,10 @@ Object {
 
 exports[`ErrorHandler --- Get Readable Error Object > unknown response 1`] = `
 Object {
-  "_abort": false,
   "body": "",
   "bodyUsed": false,
   "headers": Object {
-    "content-type": Array [
-      "test",
-    ],
+    "content-type": "test",
   },
   "message": "Something went wrong.",
   "ok": false,
@@ -117,15 +103,11 @@ Object {
 
 exports[`ErrorHandler --- Method tests > map JSON Response 1`] = `
 Object {
-  "_abort": false,
-  "_bytes": 58,
   "body": "{\\"explanation\\":\\"some error occurred\\",\\"title\\":\\"errorTitle\\"}",
   "bodyUsed": true,
   "explanation": "some error occurred",
   "headers": Object {
-    "content-type": Array [
-      "application/json",
-    ],
+    "content-type": "application/json",
   },
   "message": "some error occurred",
   "ok": false,

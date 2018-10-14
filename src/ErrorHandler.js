@@ -21,14 +21,14 @@ export default class ErrorHandler {
     mapReadableError = errorHandlerObject =>
         errorHandlerObject.status
             ? {
-                  title: errorHandlerObject.title,
-                  status: errorHandlerObject.status,
-                  message: errorHandlerObject.message,
-              }
+                title: errorHandlerObject.title,
+                status: errorHandlerObject.status,
+                message: errorHandlerObject.message,
+            }
             : {
-                  title: errorHandlerObject.title,
-                  message: errorHandlerObject.message,
-              };
+                title: errorHandlerObject.title,
+                message: errorHandlerObject.message,
+            };
 
     getError = async error => {
         let errorHandlerObject = await this.handleError(error);
@@ -44,19 +44,19 @@ export default class ErrorHandler {
         message: error.message || 'Unknown JS Error',
     });
 
+    mapToObj = (map => {
+        const obj = {};
+        map.forEach((v, k) => { obj[k] = v });
+        return obj;
+    });
+
     getResponseObject = response => {
-        const headers =
-            response && response.headers && response.headers['_headers'];
-        if (response['_raw']) {
-            delete response['_raw'];
-        }
-        if (headers) {
-            return {
-                ...response,
-                headers: headers,
-            };
-        }
-        return response;
+        let mappedResponse = {};
+        Object.keys(response).forEach(key => {
+            if (!key.startsWith('_')) mappedResponse[key] = response[key];
+            if (key === 'headers') mappedResponse[key] = this.mapToObj(response[key]);
+        })
+        return mappedResponse;
     };
 
     mapJsonResponse = (response, json) => {
