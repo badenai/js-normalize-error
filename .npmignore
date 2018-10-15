@@ -1,2 +1,8 @@
+# ignore folders
 src
 __tests__
+
+# ignore files
+.babelrc
+.eslintrc
+jest.config.jest
