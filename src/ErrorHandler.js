@@ -9,10 +9,11 @@ export default class ErrorHandler {
 
     logError = (errorHandlerObject, info) => {
         let msg = 'logging error';
-        if (info) msg += `${info}:\n`;
+        if (info) msg += ` ${info}:\n`;
         else msg += `:\n`;
         Object.keys(errorHandlerObject).forEach(key => {
-            msg += `\t${key}: ${errorHandlerObject[key]}\n`;
+            if(key === 'headers') msg += `\t${key}: ${JSON.stringify(errorHandlerObject[key])}\n`;
+            else msg += `\t${key}: ${errorHandlerObject[key]}\n`;
         });
         console.log(msg);
         return msg;

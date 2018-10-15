@@ -1,3 +1,3 @@
 import ErrorHandler from './ErrorHandler';
 
-export default ErrorHandler;
+module.exports = ErrorHandler;
