@@ -1,5 +1,6 @@
 /* global Response */
 import isError from 'lodash/isError';
+import isPlainObject from 'lodash/isPlainObject';
 
 export default class ErrorHandler {
     constructor(isDebug = false, info) {
@@ -62,14 +63,23 @@ export default class ErrorHandler {
 
     mapJsonResponse = (response, json) => {
         const jsonResponse = this.getResponseObject(response);
-        const mappedResponse = {
-            ...jsonResponse,
-            ...json,
-            title: json.title || jsonResponse.statusText,
-            status: jsonResponse.status,
-            message: json.explanation,
-        };
-        return mappedResponse;
+
+        if (isPlainObject(json)) {
+            return {
+                ...jsonResponse,
+                ...json,
+                title: json.title || jsonResponse.statusText,
+                status: jsonResponse.status,
+                message: json.explanation
+            }
+        } else {
+            return {
+                ...jsonResponse,
+                title: jsonResponse.statusText,
+                status: jsonResponse.status,
+                message: json
+            }
+        }
     };
 
     mapTextResponse = (response, text) => {
